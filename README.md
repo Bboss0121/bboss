@@ -1,1 +1,161 @@
-# bboss
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Will You Be Mine?</title>
+  <style>
+    body {
+      background: #ffe6e6;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #d6336c;
+    }
+
+    .drawing-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .drawing {
+      width: 120px;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: float 4s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      top: 0;
+      left: -10px;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-200px) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .proposal {
+      margin-top: 40px;
+      font-size: 1.8rem;
+      color: #d6336c;
+      background: #fff0f5;
+      padding: 20px;
+      border-radius: 20px;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .btn-yes {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      color: white;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .btn-yes:hover {
+      background-color: #ff85c1;
+    }
+
+    .highlight {
+      color: #ff1493;
+      font-weight: bold;
+      font-size: 2rem;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff1493;
+      }
+      to {
+        text-shadow: 0 0 15px #ff69b4, 0 0 25px #ff1493;
+      }
+    }
+
+    .heart:nth-child(odd) { left: 30%; animation-delay: 1s; }
+    .heart:nth-child(even) { left: 60%; animation-delay: 2s; }
+  </style>
+</head>
+<body>
+
+  <h1>💖 Will You Be Mine Forever? 💖</h1>
+
+  <div class="drawing-container">
+    <!-- Girl SVG -->
+    <svg class="drawing" viewBox="0 0 64 64">
+      <circle cx="32" cy="12" r="10" fill="#ffb6c1" />
+      <rect x="24" y="24" width="16" height="24" fill="#ff69b4" />
+      <line x1="24" y1="24" x2="16" y2="40" stroke="#000" stroke-width="2"/>
+      <line x1="40" y1="24" x2="48" y2="40" stroke="#000" stroke-width="2"/>
+      <line x1="24" y1="48" x2="20" y2="60" stroke="#000" stroke-width="2"/>
+      <line x1="40" y1="48" x2="44" y2="60" stroke="#000" stroke-width="2"/>
+    </svg>
+
+    <!-- Boy SVG -->
+    <svg class="drawing" viewBox="0 0 64 64">
+      <circle cx="32" cy="12" r="10" fill="#add8e6" />
+      <rect x="24" y="24" width="16" height="24" fill="#4682b4" />
+      <line x1="24" y1="24" x2="16" y2="40" stroke="#000" stroke-width="2"/>
+      <line x1="40" y1="24" x2="48" y2="40" stroke="#000" stroke-width="2"/>
+      <line x1="24" y1="48" x2="20" y2="60" stroke="#000" stroke-width="2"/>
+      <line x1="40" y1="48" x2="44" y2="60" stroke="#000" stroke-width="2"/>
+    </svg>
+  </div>
+
+  <div class="proposal">
+    To the most beautiful soul, <span class="highlight">Vara</span>,<br/>
+    I promise to make you smile every day,<br/>
+    hold your hand in every storm,<br/>
+    and love you more with every heartbeat.<br/><br/>
+    💍 Will you be mine forever?
+    <br/>
+    <button class="btn-yes">YES 💗</button>
+  </div>
+
+  <!-- Floating Hearts -->
+  <div class="heart" style="top: 80%;"></div>
+  <div class="heart" style="top: 85%;"></div>
+  <div class="heart" style="top: 90%;"></div>
+  <div class="heart" style="top: 95%;"></div>
+
+</body>
+</html>
